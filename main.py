@@ -47,6 +47,7 @@ def process_subscribes(subscribes):
             continue
         _nodes = get_nodes(subscribe['url'])
         if _nodes and len(_nodes) > 0:
+            add_detour(_nodes, subscribe)
             add_prefix(_nodes, subscribe)
             add_emoji(_nodes, subscribe)
             nodefilter(_nodes, subscribe)
@@ -129,6 +130,10 @@ def nodefilter(nodes, subscribe):
                 if exns in node['tag']:
                     nodes.remove(node)
 
+def add_detour(nodes, subscribe):
+    if subscribe.get('detour'):
+        for node in nodes[:]:  # 遍历 nodes 的副本，以便安全地删除元素
+            node['detour'] = subscribe.get('detour')
 
 def get_nodes(url):
     if url.startswith('sub://'):
