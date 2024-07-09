@@ -1,0 +1,16 @@
+.DS_Store
+.erdconfig*
+.pry*
+.ssl
+.git*
+.bundle
+.byebug_history
+.idea
+.envrc
+.htpasswd
+.git*
+Dockerfile
+docker-compose.yml
+tmp/
+config.json
+providers.json

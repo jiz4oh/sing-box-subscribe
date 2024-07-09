@@ -23,7 +23,7 @@
         "proxy": "",
         "direct": ""
     },
-    "save_config_path": "./config.json",
+    "save_config_path": "./tmp/config.json",
     "auto_backup": false,
     "exclude_protocol":"ssr",
     "config_template": "",

@@ -1,0 +1,8 @@
+services:
+  sing-box-subscribe:
+    build:
+      context: .
+    image: jiz4oh/sing-box-subscribe
+    volumes:
+      - ./tmp:/app/tmp
+      - ./providers.json:/app/providers.json
